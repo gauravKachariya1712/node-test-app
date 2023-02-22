@@ -16,5 +16,5 @@ jobs:
         key: ${{ secrets.GIT_SSH_KEY }}
         port: 22
         script: |
-          mkdir gauravKachariya
-          git clone https://github.com/cleder/awesome-python-testing.git
+          cd /home/ubuntu/node-test-app
+          git pull 
