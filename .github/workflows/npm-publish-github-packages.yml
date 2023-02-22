@@ -1,0 +1,20 @@
+name: SSH Testing
+on:
+  push:
+    branches: [ master ]   
+    
+jobs:
+  test:
+    name: SshTest
+    runs-on: ubuntu-latest
+    steps:
+    - name: creating ssh connection and testing
+	    uses: appleboy/ssh-action@v0.1.7
+      with: 
+        host: 54.204.107.77
+        username: ubuntu
+        key: ${{ secrets.GIT_SSH_KEY }}
+        port: 22
+        script: |
+          mkdir gauravKachariya
+          git clone https://github.com/cleder/awesome-python-testing.git
