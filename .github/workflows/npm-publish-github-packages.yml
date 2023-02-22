@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: creating ssh connection and testing
-	    uses: appleboy/ssh-action@v0.1.7
+      uses: appleboy/ssh-action@v0.1.7
       with: 
         host: 54.204.107.77
         username: ubuntu
